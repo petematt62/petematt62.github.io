@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>MattEbooks</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>v0.1 nUniverse</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src = "nUWor2.js"></script>
 </head>
+
 <body>
-	<h1>MattEbooks</h1>
-	<img src="images/B2ahkue.jpg.jpg" alt="in case it breaks, users see this" Title="My image">
-		<p id="slogan">Read, live, read some more.</p>
-		<p id="business">MattEbooks is an Ebookstore for teens with plenty of comics, interesting situations, and adventure.  Leave your humdrum existence behind and dive into reading - adventure awaits on every page.</p>
-		<ul id="doubtit">
-			<li>"Not my plan for this homepage"</li>
-			<li>"Doubt I'll have a list on the homepage"</li>
-			<li>"Teen drama when asked to put a list on the homepage"</li>
-		</ul>
-	<h3>Contact Me</h3>
-		<p id="contact">email mattebooks@gmail.com for support</p>
+<!-- example of using the left and right -->
+<div id="container">
+    <div class="left" id="theName">
+        Numbers Universe
+    </div>
+    <div class="right">
+        <div id="nav">
+            <div id="home">Home</div>
+            <div id="statistics">Show Score</div>
+            <div id="pUniv">Polynomial Universe</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="mind">
+    <h1>Challenge your mind. Explore a universe!</h1>  <!--this is in the left column -->
+</div>
+
+<canvas id="twoCanvas" width=600em height=400em>Please upgrade your browser to use this app!</canvas>
+<canvas id="nextCanvas" width=600em height=400em>Please upgrade your browser to use this app!</canvas>
+
+<div class="left">
+<form>
+     <p>
+        <input type="button" id="intButton" value="ShowAllIntegers">
+    </p>
+     <p>
+        <input type="button" id="demoButton" value="Demo On/Off">
+    </p>
+    <p>
+        <input type="button" id="diceButton" value="DiceForOperation">
+    </p>
+</form>
+</div>
+
+<div class="arrows">
+    <div id="arrowRight">
+        <p id="artext">One Player</p>
+    </div>
+    <div id="arrowDown">
+        <p id='adtext'>Two Player</p>
+    </div>
+</div>
+
 </body>
 </html>
