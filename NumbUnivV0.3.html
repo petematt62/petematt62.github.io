@@ -1,0 +1,232 @@
+<!-- 
+Author: Matt Peterson
+Copyright: 2015
+All rights reserved
+ -->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>v0.3 nUniverse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src = "testScript.js"></script>
+</head>
+
+<body>
+
+<div id="thepage">
+
+<div id="titlecontainer"> 
+	<header>
+		Numbers Universe
+	</header>
+	<div class="fright">
+		<form>
+		     <p>
+		        <input type="button" id="helpButton" value="Show Help">
+		    </p>
+		     <p>
+		        <input type="button" id="saveButton" value="Save / Recall">
+		    </p>
+		    <p>
+		        <input type="button" id="exitButton" value="Exit">
+		    </p>
+		</form>
+	</div>
+	
+</div>
+
+<div id="theleft">
+
+<div class="tablecontainer"> 
+<table>
+  <tr>
+    <td><div class="op">Sum</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Difference</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+   <tr>
+    <td><div class="op">Product</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Quotient</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Sqr Root</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Square</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <th><div class="op"></div></th>
+    <th><div class="num">+I</div></th> 
+    <th><div class="num">I</div></th>
+    <th><div class="num">+R</div></th> 
+    <th><div class="num">R</div></th>
+    <th><div class="num">+lR</div></th> 
+    <th><div class="num">lR</div></th>
+  </tr>
+</table>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<!-- end of table container -->
+	<div class="canvashdr">
+		<div class="player">Player One</div>
+		<div class="currently">&radic;<span style="text-decoration:overline;">&nbsp;I&nbsp;</span></div>
+		<div class="go">GO!</div>
+	</div>
+	<div class="container" id="contain"> 
+   <div id="dyna1"></div> <!-- dynamically created stuff here-->
+		<canvas id="leftCanvas" width=700px height=433px>Please upgrade your browser to use this app!</canvas>
+		<div class="clear"></div>
+	</div>
+
+</div>
+<!-- end of THE LEFT -->
+
+<div id="theright">
+
+<div class="tablecontainer"> 
+<table id="rightTable">
+  <tr>
+    <td><div class="op">Sum</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Difference</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+   <tr>
+    <td><div class="op">Product</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Quotient</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Sqr Root</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <td><div class="op">Square</div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+    <td><div class="here"></div></td> 
+    <td><div class="here"></div></td>
+  </tr>
+  <tr>
+    <th><div class="op"></div></th>
+    <th><div class="num">+I</div></th> 
+    <th><div class="num">I</div></th>
+    <th><div class="num">+R</div></th> 
+    <th><div class="num">R</div></th>
+    <th><div class="num">+lR</div></th> 
+    <th><div class="num">lR</div></th>
+  </tr>
+</table>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<!-- end of table container -->
+	<div class="nextcanvashdr">
+		<div class="player">Player Two</div>
+		<div class="currently">&radic;<span style="text-decoration:overline;">&nbsp;lR&nbsp;</span></div>
+		<div class="go">GO!</div>
+	</div>
+	<div class="nextcontainer">
+   <div id="dyna2"></div> <!-- dynamically created stuff here-->
+		<canvas id="rightCanvas" width=700px height=433px>Please upgrade your browser to use this app!</canvas>
+		<div class="clear"></div>
+	</div>
+
+</div>
+<!-- end of THE RIGHT -->
+
+</div>
+<!-- end of the page -->
+
+</body>
+<div id="atEnd"></div>
+<footer>This is a footer.  Copyright 2015 Matt Peterson</footer>
+</html>
+<!-- 
+<div id="someColumn">
+    <textarea>Textbox!</textarea>
+  </div> -->

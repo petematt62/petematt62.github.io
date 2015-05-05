@@ -1,0 +1,457 @@
+/*
+Author: Matt Peterson
+Copyright: 2015
+All rights reserved
+*/
+
+
+.fright
+{position: absolute;
+    display: inline-block;
+    top: 1em;
+    right: 1em;
+     width: 8em;
+     height: 6em;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+#theleft
+{position: absolute;
+    display: inline-block;
+    top: 14.5em;
+    left: 1em;
+     width: 44em;
+     height: 41em;
+    margin: 0;
+    padding: 0;
+}
+#theright
+{position: absolute;
+    display: inline-block;
+    top: 14.5em;
+    right: 1em;
+     width: 44em;
+     height: 41em;
+    margin: 0;
+    padding: 0;
+     /*700wide 644tall*/
+}
+#thepage 
+{position: relative;
+    width: 92em;
+    /*add 32px to nominal 1432 width to set space between canvases*/
+    /*height=662px + 16px for top = 678px*/
+    height: 55em;
+    margin: auto;
+    padding: 0;
+}
+.clear
+{clear: both;
+}
+/*........*/
+ /* fcfff5 d1dbbd 91aa9d 3e606f 193441 neutral blue palette*/ 
+
+body {
+font-size: 16px;  
+background: #fffdde;
+}
+canvas {
+display: inline-block;
+background: #d1dbbd; 
+border: 1px solid black;
+/*width=700px height=433px*/
+/*margin-right: 1.5em;*/
+}
+input {
+position: relative;
+ background: #999; 
+ font-weight: 500;
+ font-size: 1em; 
+ margin-bottom: 5%;
+ width: 100%;   
+}
+h1 {
+/*font-family: verdana, arial, sans-serif;*/
+font-family: serif;
+}
+header {
+    display: inline-block;
+    font-family: verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 7.5em;
+    color: #666;
+}
+footer {
+    position: relative;
+    width: 90em;
+    margin: 1em auto auto auto;
+    height: 2em;
+    background: #3e606f;
+    color: #fffdde;
+    text-align: center;
+    padding-top: 1em;
+}
+table {
+    display: inline-block;
+    vertical-align: bottom;
+    background: #d1dbbd; 
+    border: 1px solid black;
+}
+.titlecontainer {
+    position: absolute;
+    top: .2em;
+    left: .1em;
+    display: inline-block;
+    width: 90em;
+    height: 8em;
+    margin: auto;
+    padding: 0;
+    border: solid 1px #333;
+    }
+.tablecontainer {
+    display: inline-block;
+    margin: -2em 0 2em  0;
+    width: 100%;
+}
+.tablecontainer table#rightTable {
+    background-color: #91aa9d;
+}
+.tablecontainer p {
+    display: inline-block;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    width: 50%;
+}
+.here {
+    border: 1px solid black;
+    margin: .1em;
+    background-color: red;
+    width: 1.5em;
+    height: .9em;
+}
+.container {
+    display: inline-block;
+    margin: 0;
+}
+.nextcontainer {
+    display: inline-block;
+    margin: 0;
+}
+.canvashdr {
+    display: inline-block;
+    background-color: #fffdde;
+    vertical-align: middle;
+    line-height: 3em;
+    margin: -1em 0 1em 0;
+    width: 100%;
+    height: 3em;
+}
+.player {
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    width: 6em;
+    height: 3em;
+}
+.currently {
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd; 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    width: 6em;
+    height: 1.5em;
+    margin-left: 30%;
+}
+.go {
+    float: right;
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5em; 
+    font-size: 2em;
+    width: 2em;
+    height: 1.5em; 
+}
+.nextcanvashdr {
+    display: inline-block;
+    background-color: #fffdde;
+    vertical-align: middle;
+    line-height: 3em;
+    margin: -1em 0 1em 0;
+    width: 100%;
+    height: 3em;
+}
+.nextcanvashdr .player {
+    background-color: #91aa9d;
+}
+.nextcanvashdr .currently {
+    background-color: #91aa9d;
+}
+.nextcanvashdr .go {
+    background-color: #91aa9d;
+}
+#rightCanvas {
+    background-color: #91aa9d;
+}
+#leftCanvas {
+    background-color: #d1dbbd; 
+}
+@media only screen and (max-width: 1480px) {
+
+    body {
+    font-size: 12px;  
+    /*background: white;*/
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    
+    body {
+        font-size: 10px;  
+    }
+    header {
+    display: inline-block;
+    font-family: verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 4.4em;
+    color: #666;
+    margin: 0.2em 0 0 0.3em;
+    }
+    table {
+        display: inline-block;
+        vertical-align: bottom;
+        background: #d1dbbd; 
+        border: 1px solid black;
+        width: 100%;
+        /*height: 1em;*/
+    }
+    input {
+        position: relative;
+        background: #999; 
+        font-weight: 500;
+        font-size: 0.75em;
+        text-align: left; 
+        margin-bottom: 5%;
+        width: 100%; 
+    }
+    footer {
+    display: inline-block;
+    height: 0;
+    visibility: hidden;
+    }
+    .titlecontainer {
+    position: absolute;
+    top: .2em;
+    left: .1em;
+    display: inline-block;
+    width: 53em;
+    height: 6em;
+    margin: auto;
+    padding: 0;
+    border: solid 1px #333;
+    }
+    .fright
+    {
+    position: absolute;
+    display: inline-block;
+    top: 1em;
+    right: 1em;
+     width: 6em;
+     height: 6em;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    /*border: solid 1px #333;*/
+    }
+    .tablecontainer {
+    display: inline-block;
+    margin: -1em 0 1.5em 0;
+    width: 100%;
+    }
+    .tablecontainer p {
+    display: inline-block;
+    width: 100em;
+    height: 0;
+    margin-top: -0.6em;
+    visibility: hidden;
+    }
+    .tablecontainer table {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: -1em;
+     }
+     .tablecontainer table tr {
+    display: inline-block;
+    width: 100%;
+     }
+    .tablecontainer table tr td {
+    display: inline-block;
+    width: 13%;
+     }
+    .tablecontainer table tr th {
+    display: inline-block;
+    width: 13%;
+     }
+     .here {
+    border: 1px solid black;
+    margin: 0;
+    background-color: red;
+    width: 4em;
+    height: .2em;
+    }
+     .op {
+    text-align: right;
+    margin: 0.1em .3em .1em .1em;
+    width: 4em;
+    height: .2em;
+    }
+
+    #thepage 
+    {position: relative;
+        width: 55em;
+        /*add 32px to nominal 1432 width to set space between canvases*/
+        /*height=662px + 16px for top = 678px*/
+        height: 92em;
+        margin: auto;
+        padding: 0;
+    }
+
+    #theleft
+    {position: absolute;
+        display: inline-block;
+        top: 8em;
+        left: 2em;
+         width: 44em;
+         height: 41em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #theright
+    {position: absolute;
+        display: inline-block;
+        top: 50em;
+        left: 2em;
+         width: 44em;
+         height: 41em;
+        margin: 0;
+        padding: 0;
+         /*700wide 644tall*/
+    }
+}
+/*end of media only 1110px for smallest screen*/
+
+/*the following are dynamically created by javascript when the left canvas is clicked */
+.dynadiv {
+    position: absolute;
+       left: 0;
+       bottom: 1.25em;
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd; 
+    /*background-color: red;*/
+    width: 100%;
+    height: 66%;
+}
+
+.dynainput {
+display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #A6CDAE;
+    width: 50%;
+    height: 10%;
+    margin: 3% 0 0 25%;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 550;
+    font-size: 1.5em;
+}
+.dynadivmopa {
+   display: inline-block;
+    border: 1px solid black;
+    background-color: #A6CDAE;
+    width: 72%;
+    height: 60%;
+    margin: 3% 0 0 25%;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+.dynadivmode {
+   display: inline-block;
+    border: 1px solid black;
+    background-color: #A6CDAE;
+    width: 28%;
+    height: 50%;
+    /*margin: 3% 1.5% 0 25%;*/
+    font-family: verdana, arial, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+.dynaheads {
+  display: inline-block;
+    /*border: 1px solid black;*/
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: top;
+    line-height: 1em;
+    width: 95%;
+    height: 1em;
+    margin: 0.25em 0;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+}
+.dynaselect {
+ display: inline-block;
+    /*border: 1px solid black;*/
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: top;
+    line-height: 1em;
+    width: 95%;
+    height: 1.5em;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+.dynapara {
+     display: inline-block;
+    border: 1px solid black;
+    text-align: left;
+    vertical-align: top;
+    background-color: #A6CDAE;
+    width: 28%;
+    height: 50%;
+    /*margin: 3% 1.5% 0 25%;*/
+    font-family: verdana, arial, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+/*end of DOM changes from the left canvas click*/
+
+/*only for the smallest screen..currently happens only during onload in smallest size*/
+.dynaHelpPara {
+    position: absolute;
+       right: -8em;
+       top: -1em;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+    width: 7em;
+    height: 39.75em;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}

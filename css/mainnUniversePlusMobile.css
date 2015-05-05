@@ -1,0 +1,198 @@
+/* this .left .right .clear sets up the page columns 
+ this style sets left and right column edges # works once . works on multiple items-->*/
+.left
+{width: 33%;   /*orig positioning */
+float: left;    /*orig positioning */
+}
+
+.right
+{margin-left: 33%; /* orig positioning Change this to the width of left column */
+}
+.fright
+{width: 20%;
+    margin-right: 12%;
+float: right;
+text-align: right;
+}
+.onleft 
+{display: inline-block;
+    margin-left: 0;
+}
+.onright 
+{display: inline-block;
+    width: 700px;
+    margin-right: 12%;
+    float: right;
+}
+#theleft
+{display: inline-block;
+    margin-left: 12%;
+}
+#theright
+{display: inline-block;
+    margin-right: 12%;
+}
+.clear
+{clear: both;
+}
+/*........*/
+ /* fcfff5 d1dbbd 91aa9d 3e606f 193441 neutral blue palette*/ 
+
+body {
+font-size: 16px;  
+background: #fffdde;
+}
+canvas {
+display: inline-block;
+background: #d1dbbd; 
+border: 1px solid black;
+/*margin-right: 1.5em;*/
+}
+input {
+ background: #999; 
+ font-weight: 600;   
+}
+h1 {
+/*font-family: verdana, arial, sans-serif;*/
+font-family: serif;
+}
+header {
+    display: inline-block;
+    font-family: verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 7.5em;
+    margin:.1% 0 1.6%% 1.4% ;
+    color: #666;
+}
+footer {
+    height: 3em;
+    width: 100%;
+    background: #3e606f;
+    color: #fffdde;
+    margin-top: 1.5em;
+}
+table {
+    display: inline-block;
+    vertical-align: bottom;
+    background: #d1dbbd; 
+    border: 1px solid black;
+}
+.tablecontainer {
+    display: inline-block;
+    margin-left: 0%;
+    width: 700px;
+}
+.nexttablecontainer {
+    display: inline-block;
+    margin-left: 0;
+    width: 700px;
+}
+.nexttablecontainer table {
+    background-color: #91aa9d;
+}
+.tablecontainer p {
+    display: inline-block;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    width: 50%;
+}
+.nexttablecontainer p {
+    display: inline-block;
+    text-align: left;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    width: 50%;
+}
+.here {
+    border: 1px solid black;
+    margin: .1em;
+    background-color: red;
+    width: 1.5em;
+    height: .9em;
+}
+.container {
+    display: inline-block;
+    margin-left: 0%;
+    margin-right: 0;
+}
+.nextcontainer {
+    display: inline-block;
+    margin-left: 0;
+}
+.canvashdr {
+    display: inline-block;
+    background-color: #fffdde;
+    vertical-align: middle;
+    line-height: 3em;
+    margin: .5em 1.5em .5em 0;
+    width: 700px;
+    height: 3em;
+}
+.player {
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    width: 6em;
+    height: 3em;
+}
+.currently {
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd; 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    width: 6em;
+    height: 1.5em;
+    margin-left: 30%;
+}
+.go {
+    float: right;
+    display: inline-block;
+    border: 1px solid black;
+    background: #d1dbbd;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5em; 
+    font-size: 2em;
+    width: 2em;
+    height: 1.5em; 
+}
+.nextcanvashdr {
+    display: inline-block;
+    background-color: #fffdde;
+    vertical-align: middle;
+    line-height: 3em;
+    margin: .5em 0;
+    width: 700px;
+    height: 3em;
+}
+.nextcanvashdr .player {
+    background-color: #91aa9d;
+}
+.nextcanvashdr .currently {
+    background-color: #91aa9d;
+}
+.nextcanvashdr .go {
+    background-color: #91aa9d;
+}
+#nextCanvas {
+    background-color: #91aa9d;
+}
+/*@media only screen and (max-width: 1400px) {
+.nextcanvasheader {
+    float: none;
+}
+.nextcontainer {
+    float: none;
+}
+.nexttablecontainer {
+    float: none;
+}*/
+}
+        
